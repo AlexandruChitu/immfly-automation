@@ -24,7 +24,7 @@ public class SortByPrice {
         }
 
     driver.findElement(By.id("sorter")).click();
-    driver.findElement(By.cssSelector("select#sorter > option[value='price']")).click();
+    driver.findElement(By.cssSelector("#sorter > option:nth-child(3)")).click();
     Thread.sleep(3000);
 
     List<WebElement> afterFilterPrice = driver.findElements(By.className("price"));

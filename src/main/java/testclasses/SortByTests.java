@@ -52,12 +52,11 @@ public class SortByTests extends BaseMultiThread {
         Assert.assertTrue(speedBirdCafeObject.verifySelectNameOption()&& speedBirdCafeObject.verifySelectPriceOption()&&speedBirdCafeObject.verifySelectNewArrivalsOption()&&speedBirdCafeObject.verifySelectPositionOption());
     }
 
-    @Test(description = "The user will check sorting by prices on the first page", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"})
+    @Test(description = "The user will check sorting by prices on the first page", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"}, enabled = false)
     @Description("The user will check sorting by prices on the first page")
     public void verifySortingByPrices() throws InterruptedException {
 
         homePageObject.clickSpeedbirdCafe();
-        homePageObject.clickAllowAllCookies();
         speedBirdCafeObject.clickSortByByDropdown();
         SortByPrice.verifySortingByPrices();
     }

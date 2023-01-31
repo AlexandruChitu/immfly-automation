@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Production" parallel="classes"  verbose="5" thread-count="7" configfailurepolicy="continue">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="PRODUCTION"/>
+    <test name="Test Suite">
+        <groups>
+            <run>
+                <include name="PRODUCTION"/>
+            </run>
+        </groups>
+        <classes>
+<!--                        Microsoft Suite-->
+          <class name="testclasses.SortByTests"/>
+
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="Listeners.AnnotationTransformer"/>
+    </listeners>
+</suite>
+

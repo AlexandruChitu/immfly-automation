@@ -35,7 +35,7 @@ public class SortByTests extends BaseMultiThread {
         driver.navigate().to(BaseMultiThread.url);
     }
 
-    @Test(description = "The user will access Speedbird Cafe", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"}, enabled = false)
+    @Test(description = "The user will access Speedbird Cafe", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"})
     @Description("The user will access Speedbird Cafe and check if the Sort by feature is displayed")
     public void verifySortingDisplayed() {
 
@@ -43,7 +43,7 @@ public class SortByTests extends BaseMultiThread {
         Assert.assertTrue(speedBirdCafeObject.verifySortByDropdown());
     }
 
-    @Test(description = "The user will check all available sorting options", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"}, enabled = false)
+    @Test(description = "The user will check all available sorting options", retryAnalyzer = RetryFailedTests.class, groups = {"PRODUCTION"})
     @Description("The user will check all available sorting options. Position, name, price and new arrivals")
     public void verifySortingOptions() {
 
